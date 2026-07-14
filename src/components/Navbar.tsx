@@ -26,9 +26,9 @@ export function Navbar({ currentPath, navigate, user, onLogout }: NavbarProps) {
     ? [
         { label: 'Home', path: '/', icon: Home },
         { label: 'Explore', path: '/explore', icon: Compass },
-        { label: 'My Bookings', path: '/manage?tab=bookings', icon: Calendar },
-        { label: 'List a Space', path: '/add-workspace', icon: PlusSquare },
-        { label: 'My Spaces', path: '/manage?tab=spaces', icon: Briefcase },
+        { label: 'My Bookings', path: '/items/manage?tab=bookings', icon: Calendar },
+        { label: 'List a Space', path: '/items/add', icon: PlusSquare },
+        { label: 'My Spaces', path: '/items/manage?tab=spaces', icon: Briefcase },
         { label: 'About', path: '/about', icon: Info },
       ]
     : [
@@ -99,14 +99,14 @@ export function Navbar({ currentPath, navigate, user, onLogout }: NavbarProps) {
                         <p className="text-xs font-bold text-zinc-900 truncate mt-0.5">{user.email}</p>
                       </div>
                       <button
-                        onClick={() => handleNav('/manage?tab=bookings')}
+                        onClick={() => handleNav('/items/manage?tab=bookings')}
                         className="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-bold text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 transition-colors text-left"
                       >
                         <Calendar className="h-4 w-4 text-zinc-400" strokeWidth={1.75} />
                         My Bookings
                       </button>
                       <button
-                        onClick={() => handleNav('/manage?tab=spaces')}
+                        onClick={() => handleNav('/items/manage?tab=spaces')}
                         className="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-bold text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 transition-colors text-left"
                       >
                         <Briefcase className="h-4 w-4 text-zinc-400" strokeWidth={1.75} />

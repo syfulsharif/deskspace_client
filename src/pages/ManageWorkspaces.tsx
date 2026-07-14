@@ -136,7 +136,7 @@ export function ManageWorkspaces({ user, navigate, initialTab = 'bookings', refr
         <button
           onClick={() => {
             setActiveTab('bookings');
-            navigate('/manage?tab=bookings');
+            navigate('/items/manage?tab=bookings');
           }}
           className={`flex items-center gap-2 px-6 py-3.5 border-b-2 font-semibold text-sm transition-colors cursor-pointer ${
             activeTab === 'bookings'
@@ -150,7 +150,7 @@ export function ManageWorkspaces({ user, navigate, initialTab = 'bookings', refr
         <button
           onClick={() => {
             setActiveTab('spaces');
-            navigate('/manage?tab=spaces');
+            navigate('/items/manage?tab=spaces');
           }}
           className={`flex items-center gap-2 px-6 py-3.5 border-b-2 font-semibold text-sm transition-colors cursor-pointer ${
             activeTab === 'spaces'
@@ -303,7 +303,7 @@ export function ManageWorkspaces({ user, navigate, initialTab = 'bookings', refr
             <p className="text-sm text-zinc-500 leading-relaxed max-w-sm mx-auto">
               You are not hosting any workspaces. Put your desks or recording studios to work and list your first workspace.
             </p>
-            <Button variant="secondary" size="sm" onClick={() => navigate('/add-workspace')}>
+            <Button variant="secondary" size="sm" onClick={() => navigate('/items/add')}>
               List a Workspace <PlusCircle className="ml-1.5 h-4 w-4" />
             </Button>
           </div>

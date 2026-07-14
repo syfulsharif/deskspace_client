@@ -501,7 +501,7 @@ export function Home({ navigate, featuredSpaces }: HomeProps) {
             <Button variant="secondary" size="lg" onClick={() => navigate('/explore')} className="w-full sm:w-auto">
               Browse Workspaces <Compass className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" size="lg" onClick={() => navigate('/add-workspace')} className="text-white border-white/20 hover:bg-white/10 w-full sm:w-auto">
+            <Button variant="outline" size="lg" onClick={() => navigate('/items/add')} className="text-white border-white/20 hover:bg-white/10 w-full sm:w-auto">
               List Your Studio <PlusCircle className="ml-2 h-4 w-4" />
             </Button>
           </div>

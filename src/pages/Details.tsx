@@ -85,7 +85,7 @@ export function Details({ workspaceId, user, navigate }: DetailsProps) {
         setBookingSuccess(true);
         // Automatically redirect to Bookings Tab in 2 seconds
         setTimeout(() => {
-          navigate('/manage?tab=bookings');
+          navigate('/items/manage?tab=bookings');
         }, 2200);
       } else {
         setBookingError(res.error || 'Failed to complete reservation.');

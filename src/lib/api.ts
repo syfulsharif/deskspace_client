@@ -10,8 +10,13 @@ export const api = {
       'Content-Type': 'application/json',
     };
 
+    // Use VITE_API_URL for production (Vercel), fallback to relative for local Vite proxy
+    const baseUrl = import.meta.env.VITE_API_URL || '';
+    const fullUrl = `${baseUrl}${url}`;
+
     const config: RequestInit = {
       ...options,
+      credentials: options.credentials || 'include',
       headers: {
         ...defaultHeaders,
         ...options.headers,
@@ -19,7 +24,7 @@ export const api = {
     };
 
     try {
-      const response = await fetch(url, config);
+      const response = await fetch(fullUrl, config);
       const data = await response.json();
       return data as APIResponse<T>;
     } catch (error) {

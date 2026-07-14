@@ -126,12 +126,12 @@ export default function App() {
     }
 
     // 6. PROTECTED: ADD WORKSPACE
-    if (path === '/add-workspace') {
+    if (path === '/items/add') {
       return <AddWorkspace user={user} navigate={navigate} />;
     }
 
     // 7. PROTECTED: MANAGE LISTINGS & BOOKINGS
-    if (path.startsWith('/manage')) {
+    if (path.startsWith('/items/manage')) {
       const urlParams = new URLSearchParams(window.location.search);
       const tabParam = urlParams.get('tab') || 'bookings';
       return <ManageWorkspaces user={user} navigate={navigate} initialTab={tabParam} refreshWorkspacesGlobal={fetchFeaturedSpaces} />;
