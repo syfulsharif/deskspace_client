@@ -10,8 +10,8 @@ export const api = {
       'Content-Type': 'application/json',
     };
 
-    // Use VITE_API_URL for production (Vercel), fallback to relative for local Vite proxy
-    const baseUrl = import.meta.env.VITE_API_URL || '';
+    // Use VITE_API_URL for production (Vercel), fallback to deployed URL, then relative for local Vite proxy
+    const baseUrl = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? 'https://deskspace-backend.vercel.app' : '');
     const fullUrl = `${baseUrl}${url}`;
 
     const config: RequestInit = {
