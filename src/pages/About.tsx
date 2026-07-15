@@ -72,7 +72,7 @@ export function About({ navigate }: AboutProps) {
         </div>
         <div className="lg:col-span-6 rounded-xl overflow-hidden shadow-2xl border border-zinc-800">
           <img
-            src="https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&q=80&w=800"
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
             alt="Colaborative team working"
             className="w-full h-72 object-cover"
           />
