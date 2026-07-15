@@ -11,7 +11,7 @@ export const api = {
     };
 
     // Use VITE_API_URL for production (Vercel), fallback to deployed URL, then relative for local Vite proxy
-    const baseUrl = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? 'https://deskspace-backend.vercel.app' : '');
+    const baseUrl = import.meta.env.VITE_API_URL || '';
     const fullUrl = `${baseUrl}${url}`;
 
     const config: RequestInit = {
